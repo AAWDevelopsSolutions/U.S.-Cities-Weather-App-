@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather THIS</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="index.js" defer></script>
+</head>
+
+
+<body>
+<div class="flex-container">
+
+<!--Mobile Menu-->
+
+<div class="mobile-menu">
+    <img id="mobile-menu" src="mobile-hamburger-menu-open.svg" alt="mobile-menu" width="55px" height="auto">
+</div>
+
+<!--Mobile Menu Overlay-->
+<div id="menu-drop" class="menu-search">
+    <ul class="mobile-drop">
+        <li> 
+            <label for="mobile-bar"> Search City:</label>
+            <input id="mobile-bar" type="text" placeholder="Type Here...">
+            <input id="go-btn" class="mobile-only" type="button" value="Go!">
+        </li>
+    <li class="mobile-search-city" data-city="Akron"> Akron, OH </li>
+    <li class="mobile-search-city" data-city="Albuquerque"> Albuquerque, NM </li>
+    <li class="mobile-search-city" data-city="Albany"> Albany, NY </li>
+    <li class="mobile-search-city" data-city="Allentown"> Allentown, PA </li>
+    <li class="mobile-search-city" data-city="Anchorage"> Anchorage, AK </li>
+    <li class="mobile-search-city" data-city="Atlanta"> Atlanta, GA </li>
+    <li class="mobile-search-city" data-city="Austin"> Austin, TX </li>
+    <li class="mobile-search-city" data-city="Baltimore"> Baltimore, MD </li>
+    <li class="mobile-search-city" data-city="Baton Rouge"> Baton Rouge, LA </li>
+    <li class="mobile-search-city" data-city="Birmingham"> Birmingham, AL</li>
+    <li class="mobile-search-city" data-city="Boise"> Boise, ID </li>
+    <li class="mobile-search-city" data-city="Boston"> Boston, MA </li>
+    <li class="mobile-search-city" data-city="Bridgeport"> Bridgeport, CT </li>
+    <li class="mobile-search-city" data-city="Buffalo"> Buffalo, NY </li>
+    <li class="mobile-search-city" data-city="Cincinnati"> Cincinnati, OH </li>
+    <li class="mobile-search-city" data-city="Charleston"> Charleston, SC </li>
+    <li class="mobile-search-city" data-city="Charlotte"> Charlotte, NC </li>
+    <li class="mobile-search-city" data-city="Chicago"> Chicago, IL </li>
+    <li class="mobile-search-city" data-city="Chattanooga"> Chattanooga, TN </li>
+    <li class="mobile-search-city" data-city="Cleveland"> Cleveland, OH </li>
+    <li class="mobile-search-city" data-city="Colorado Springs"> Colorado Springs, CO </li>
+    <li class="mobile-search-city" data-city="Columbia"> Columbia, SC </li>
+    <li class="mobile-search-city" data-city="Columbus"> Columbus, OH </li>
+    <li class="mobile-search-city" data-city="Dallas"> Dallas, TX </li>
+    <li class="mobile-search-city" data-city="Dayton"> Dayton, OH </li>
+    <li class="mobile-search-city" data-city="Daytona Beach"> Daytona Beach, FL </li>
+    <li class="mobile-search-city" data-city="Denver"> Denver, CO </li>
+    <li class="mobile-search-city" data-city="Des Moines"> Des Moines, IA </li>
+    <li class="mobile-search-city" data-city="Detroit"> Detroit, MI </li>
+    <li class="mobile-search-city" data-city="Durhamn"> Durham, NC </li>
+    <li class="mobile-search-city" data-city="El Paso"> El Paso, TX </li>
+    <li class="mobile-search-city" data-city="Fayetteville"> Fayetteville, PA </li>
+    <li class="mobile-search-city" data-city="Grand Rapids"> Grand Rapids, MI </li>
+    <li class="mobile-search-city" data-city="Greensboro"> Greensboro, NC </li>
+    <li class="mobile-search-city" data-city="Greenville"> Greenville, SC </li>
+    <li class="mobile-search-city" data-city="Hartford"> Hartford, CT </li>
+    <li class="mobile-search-city" data-city="Harrisburg"> Harrisburg, PA </li>
+    <li class="mobile-search-city" data-city="Honolulu"> Honolulu, HI </li>
+    <li class="mobile-search-city" data-city="Houston"> Houston, TX </li>
+    <li class="mobile-search-city" data-city="Huntsville"> Huntsville, AL </li>
+    <li class="mobile-search-city" data-city="Indianapolis"> Indianapolis, IN </li>
+    <li class="mobile-search-city" data-city="Jacksonville"> Jacksonville, FL </li>
+    <li class="mobile-search-city" data-city="Kansas City"> Kansas City, MO </li>
+    <li class="mobile-search-city" data-city="Knoxville"> Knoxville, TN </li>
+    <li class="mobile-search-city" data-city="Lakeland"> Lakeland, FL </li>
+    <li class="mobile-search-city" data-city="Lancaster"> Lancaster, PA </li>
+    <li class="mobile-search-city" data-city="Las Vegas"> Las Vegas, NV </li>
+    <li class="mobile-search-city" data-city="Lexington"> Lexington, KY </li>
+    <li class="mobile-search-city" data-city="Little Rock"> Little Rock, AR </li>
+    <li class="mobile-search-city" data-city="London"> London, UK </li>
+    <li class="mobile-search-city" data-city="Los Angeles"> Los Angeles, CA </li>
+    <li class="mobile-search-city" data-city="Louisville"> Louisville, KY </li>
+    <li class="mobile-search-city" data-city="Madison"> Madison, WI </li>
+    <li class="mobile-search-city" data-city="Memphis"> Memphis, TN </li>
+    <li class="mobile-search-city" data-city="Miami"> Miami, FL </li>
+    <li class="mobile-search-city" data-city="Milwaukee"> Milwaukee, WI </li>
+    <li class="mobile-search-city" data-city="Minneapolis"> Minneapolis, MN </li>
+    <li class="mobile-search-city" data-city="Nashville"> Nashville, TN </li>
+    <li class="mobile-search-city" data-city="New Haven"> New Haven, CT </li>
+    <li class="mobile-search-city" data-city="New Orleans"> New Orleans, LA </li>
+    <li class="mobile-search-city" data-city="New York"> New York, NY </li>
+    <li class="mobile-search-city" data-city="Ogden"> Ogden, UT </li>
+    <li class="mobile-search-city" data-city="Oklahoma City"> Oklahoma City, OK </li>
+    <li class="mobile-search-city" data-city="Omaha"> Omaha, NE </li>
+    <li class="mobile-search-city" data-city="Orlando"> Orlando, FL </li>
+    <li class="mobile-search-city" data-city="Oxnard"> Oxnard, CA </li>
+    <li class="mobile-search-city" data-city="Pensacola"> Pensacola, FL </li>
+    <li class="mobile-search-city" data-city="Philadelphia"> Philadelphia, PA </li>
+    <li class="mobile-search-city" data-city="Pheonix"> Pheonix, AZ </li>
+    <li class="mobile-search-city" data-city="Pittsburgh"> Pittsburgh, PA </li>
+    <li class="mobile-search-city" data-city="Portland-ME"> Portland, ME </li>
+    <li class="mobile-search-city" data-city="Portland-OR"> Portland, OR </li>
+    <li class="mobile-search-city" data-city="Poughkeepsie"> Poughkeepsie, NY </li>
+    <li class="mobile-search-city" data-city="Providence"> Providence, RI </li>
+    <li class="mobile-search-city" data-city="Provo"> Provo, UT </li>
+    <li class="mobile-search-city" data-city="Raleigh"> Raleigh, NC </li>
+    <li class="mobile-search-city" data-city="Rehoboth Beach"> Rehoboth Beach, DE </li>
+    <li class="mobile-search-city" data-city="Reno"> Reno, NV </li>
+    <li class="mobile-search-city" data-city="Richmond"> Richmond, VA </li>
+    <li class="mobile-search-city" data-city="Riverside"> Riverside, CA </li>
+    <li class="mobile-search-city" data-city="Rochester"> Rochester, NY </li>
+    <li class="mobile-search-city" data-city="Sacramento"> Sacramento, CA </li>
+    <li class="mobile-search-city" data-city="Salt Lake City"> Salt Lake City, UT </li>
+    <li class="mobile-search-city" data-city="San Antonio"> San Antonio, TX </li>
+    <li class="mobile-search-city" data-city="San Diego"> San Diego, CA </li>
+    <li class="mobile-search-city" data-city="San Francisco"> San Francisco, CA </li>
+    <li class="mobile-search-city" data-city="San Jose"> San Jose, CA </li>
+    <li class="mobile-search-city" data-city="San Juan"> San Juan, PR </li>
+    <li class="mobile-search-city" data-city="Scranton"> Scranton, PA </li>
+    <li class="mobile-search-city" data-city="Seattle"> Seattle, WA </li>
+    <li class="mobile-search-city" data-city="Spokane"> Spokane, WA </li>
+    <li class="mobile-search-city" data-city="St. Louis"> St. Louis, MO </li>
+    <li class="mobile-search-city" data-city="Stockton"> Stockton, CA </li>
+    <li class="mobile-search-city" data-city="Syracuse"> Syracuse, NY </li>
+    <li class="mobile-search-city" data-city="Tampa"> Tampa, FL </li>
+    <li class="mobile-search-city" data-city="Tokyo"> Tokyo, JP </li>
+    <li class="mobile-search-city" data-city="Toledo"> Toledo, OH </li>
+    <li class="mobile-search-city" data-city="Tucson"> Tucson, AZ </li>
+    <li class="mobile-search-city" data-city="Tulsa"> Tulsa, OK </li>
+    <li class="mobile-search-city" data-city="Virginia Beach"> Virginia Beach, VA </li>
+    <li class="mobile-search-city" data-city="Washington D.C."> Washington D.C., MD </li>
+    <li class="mobile-search-city" data-city="Wichita"> Wichita, KS </li>
+    <li class="mobile-search-city" data-city="Winston-Salem"> Winston-Salem, NC </li>
+    <li class="mobile-search-city" data-city="Worcester"> Worcester, MA </li>
+    </ul>
+</div>
+
+<!--Tablet Menu-->
+
+    <div class="tablet-menu">
+        <img id="tablet-menu" src="desktop-hamburger-menu-open.svg" alt="enu" width="75px" height="auto">
+    </div>
+
+<!--Tablet Menu Overlay-->
+
+<div id="menu-overlay" class="overlay-menu">
+    <ul class="overlay-section">
+        <li id="convert-link"> Toggle &deg;F / &deg;C </li>
+    </ul>
+</div>
+    
+    <h1 id="project-title">
+        Weather THIS
+    </h1>
+<section id="desktop-search" aria-label="Desktop search">
+    <label for="city-input">Search city</label>
+        <input id="city-input" type="text" name="city" placeholder="Enter city name"/>
+
+<!--Button for desktop-->
+    <button id="search-btn" class="desktop-only" type="button"> Weather This!</button>
+
+</section>
+</div>
+
+<!--Tagline for Tablet-->
+
+<div class="tagline-tablet">
+    <h2> A Weather App for the Sojourners of America</h2>
+</div>
+
+<div id="bg-container">
+    <h2 class="tagline-desktop">
+        A Weather App for the Sojourners of America
+    </h2>
+
+    <!--Search Menu for Tablet-->
+
+   <details id="tablet-search" class="tablet-dropdown">
+  <summary>
+    <span id="tablet-summary-text"> Search City: </span>
+    <img src="Down Arrow.svg" width="20" height="auto" alt="down-arrow">
+    
+   
+  </summary>
+  <ul class="city-list"> 
+    
+    <input id="view-btn" class="tablet-only" type="button" value="View:">
+
+    <li class="tablet-search-city" data-city="Akron"> Akron, OH </li>
+    <li class="tablet-search-city" data-city="Albuquerque"> Albuquerque, NM </li>
+    <li class="tablet-search-city" data-city="Albany"> Albany, NY </li>
+    <li class="tablet-search-city" data-city="Allentown"> Allentown, PA </li>
+    <li class="tablet-search-city" data-city="Anchorage"> Anchorage, AK </li>
+    <li class="tablet-search-city" data-city="Atlanta"> Atlanta, GA </li>
+    <li class="tablet-search-city" data-city="Austin"> Austin, TX </li>
+    <li class="tablet-search-city" data-city="Baltimore"> Baltimore, MD </li>
+    <li class="tablet-search-city" data-city="Baton Rouge"> Baton Rouge, LA </li>
+    <li class="tablet-search-city" data-city="Birmingham"> Birmingham, AL</li>
+    <li class="tablet-search-city" data-city="Boise"> Boise, ID </li>
+    <li class="tablet-search-city" data-city="Boston"> Boston, MA </li>
+    <li class="tablet-search-city" data-city="Bridgeport"> Bridgeport, CT </li>
+    <li class="tablet-search-city" data-city="Buffalo"> Buffalo, NY </li>
+    <li class="tablet-search-city" data-city="Cincinnati"> Cincinnati, OH </li>
+    <li class="tablet-search-city" data-city="Charleston"> Charleston, SC </li>
+    <li class="tablet-search-city" data-city="Charlotte"> Charlotte, NC </li>
+    <li class="tablet-search-city" data-city="Chicago"> Chicago, IL </li>
+    <li class="tablet-search-city" data-city="Chattanooga"> Chattanooga, TN </li>
+    <li class="tablet-search-city" data-city="Cleveland"> Cleveland, OH </li>
+    <li class="tablet-search-city" data-city="Colorado Springs"> Colorado Springs, CO </li>
+    <li class="tablet-search-city" data-city="Columbia"> Columbia, SC </li>
+    <li class="tablet-search-city" data-city="Columbus"> Columbus, OH </li>
+    <li class="tablet-search-city" data-city="Dallas"> Dallas, TX </li>
+    <li class="tablet-search-city" data-city="Dayton"> Dayton, OH </li>
+    <li class="tablet-search-city" data-city="Daytona Beach"> Daytona Beach, FL </li>
+    <li class="tablet-search-city" data-city="Denver"> Denver, CO </li>
+    <li class="tablet-search-city" data-city="Des Moines"> Des Moines, IA </li>
+    <li class="tablet-search-city" data-city="Detroit"> Detroit, MI </li>
+    <li class="tablet-search-city" data-city="Durham"> Durham, NC </li>
+    <li class="tablet-search-city" data-city="El Paso"> El Paso, TX </li>
+    <li class="tablet-search-city" data-city="Fayetteville"> Fayetteville, PA </li>
+    <li class="tablet-search-city" data-city="Grand Rapids"> Grand Rapids, MI </li>
+    <li class="tablet-search-city" data-city="Greensboro"> Greensboro, NC </li>
+    <li class="tablet-search-city" data-city="Greenville"> Greenville, SC </li>
+    <li class="tablet-search-city" data-city="Hartford"> Hartford, CT </li>
+    <li class="tablet-search-city" data-city="Harrisburgh"> Harrisburg, PA </li>
+    <li class="tablet-search-city" data-city="Honolulu"> Honolulu, HI </li>
+    <li class="tablet-search-city" data-city="Houston"> Houston, TX </li>
+    <li class="tablet-search-city" data-city="Huntsville"> Huntsville, AL </li>
+    <li class="tablet-search-city" data-city="Indianapolis"> Indianapolis, IN </li>
+    <li class="tablet-search-city" data-city="Jacksonville"> Jacksonville, FL </li>
+    <li class="tablet-search-city" data-city="Kansas City"> Kansas City, MO </li>
+    <li class="tablet-search-city" data-city="Knoxville"> Knoxville, TN </li>
+    <li class="tablet-search-city" data-city="Lakeland"> Lakeland, FL </li>
+    <li class="tablet-search-city" data-city="Lancaster"> Lancaster, PA </li>
+    <li class="tablet-search-city" data-city="Las Vegas"> Las Vegas, NV </li>
+    <li class="tablet-search-city" data-city="Lexington"> Lexington, KY </li>
+    <li class="tablet-search-city" data-city="Little Rock"> Little Rock, AR </li>
+    <li class="tablet-search-city" data-city="London"> London, UK </li>
+    <li class="tablet-search-city" data-city="Los Angeles"> Los Angeles, CA </li>
+    <li class="tablet-search-city" data-city="Louisville"> Louisville, KY </li>
+    <li class="tablet-search-city" data-city="Madison"> Madison, WI </li>
+    <li class="tablet-search-city" data-city="Memphis"> Memphis, TN </li>
+    <li class="tablet-search-city" data-city="Miami"> Miami, FL </li>
+    <li class="tablet-search-city" data-city="Milwaukee"> Milwaukee, WI </li>
+    <li class="tablet-search-city" data-city="Minneapolis"> Minneapolis, MN </li>
+    <li class="tablet-search-city" data-city="Nashville"> Nashville, TN </li>
+    <li class="tablet-search-city" data-city="New Haven"> New Haven, CT </li>
+    <li class="tablet-search-city" data-city="New Orleans"> New Orleans, LA </li>
+    <li class="tablet-search-city" data-city="New York"> New York, NY </li>
+    <li class="tablet-search-city" data-city="Ogden"> Ogden, UT </li>
+    <li class="tablet-search-city" data-city="Oklahoma City"> Oklahoma City, OK </li>
+    <li class="tablet-search-city" data-city="Omaha"> Omaha, NE </li>
+    <li class="tablet-search-city" data-city="Orlando"> Orlando, FL </li>
+    <li class="tablet-search-city" data-city="Oxnard"> Oxnard, CA </li>
+    <li class="tablet-search-city" data-city="Pensacola"> Pensacola, FL </li>
+    <li class="tablet-search-city" data-city="Philadelphia"> Philadelphia, PA </li>
+    <li class="tablet-search-city" data-city="Pheonix"> Pheonix, AZ </li>
+    <li class="tablet-search-city" data-city="Pittsburgh"> Pittsburgh, PA </li>
+    <li class="tablet-search-city" data-city="Portland-ME"> Portland, ME </li>
+    <li class="tablet-search-city" data-city="Portland-OR"> Portland, OR </li>
+    <li class="tablet-search-city" data-city="Poughkeepsie"> Poughkeepsie, NY </li>
+    <li class="tablet-search-city" data-city="Providence"> Providence, RI </li>
+    <li class="tablet-search-city" data-city="Provo"> Provo, UT </li>
+    <li class="tablet-search-city" data-city="Raleigh"> Raleigh, NC </li>
+    <li class="tablet-search-city" data-city="Rehoboth Beach"> Rehoboth Beach, DE </li>
+    <li class="tablet-search-city" data-city="Reno"> Reno, NV </li>
+    <li class="tablet-search-city" data-city="Richmond"> Richmond, VA </li>
+    <li class="tablet-search-city" data-city="Riverside"> Riverside, CA </li>
+    <li class="tablet-search-city" data-city="Rochester"> Rochester, NY </li>
+    <li class="tablet-search-city" data-city="Sacramento"> Sacramento, CA </li>
+    <li class="tablet-search-city" data-city="Salt Lake City"> Salt Lake City, UT </li>
+    <li class="tablet-search-city" data-city="San Antonio"> San Antonio, TX </li>
+    <li class="tablet-search-city" data-city="San Diego"> San Diego, CA </li>
+    <li class="tablet-search-city" data-city="San Francisco"> San Francisco, CA </li>
+    <li class="tablet-search-city" data-city="San Jose"> San Jose, CA </li>
+    <li class="tablet-search-city" data-city="San Juan"> San Juan, PR </li>
+    <li class="tablet-search-city" data-city="Scranton"> Scranton, PA </li>
+    <li class="tablet-search-city" data-city="Seattle"> Seattle, WA </li>
+    <li class="tablet-search-city" data-city="Spokane"> Spokane, WA </li>
+    <li class="tablet-search-city" data-city="St. Louis"> St. Louis, MO </li>
+    <li class="tablet-search-city" data-city="Stockton"> Stockton, CA </li>
+    <li class="tablet-search-city" data-city="Syracuse"> Syracuse, NY </li>
+    <li class="tablet-search-city" data-city="Tampa"> Tampa, FL </li>
+    <li class="tablet-search-city" data-city="Tokyo"> Tokyo, JP </li>
+    <li class="tablet-search-city" data-city="Toledo"> Toledo, OH </li>
+    <li class="tablet-search-city" data-city="Tucsson"> Tucson, AZ </li>
+    <li class="tablet-search-city" data-city="Tulsa"> Tulsa, OK </li>
+    <li class="tablet-search-city" data-city="Virginia Beach"> Virgina Beach, VA </li>
+    <li class="tablet-search-city" data-city="Washington D.C."> Washington D.C., MD </li>
+    <li class="tablet-search-city" data-city="Wichita"> Wichita, KS </li>
+    <li class="tablet-search-city" data-city="Winston-Salem"> Winston-Salem, NC </li>
+    <li class="tablet-search-city" data-city="Worcester"> Worcester, MA </li>
+   
+    <!-- more cities -->
+  </ul>
+</details>
+
+    
+</div>
+
+<!--Convert Button for Desktop-->
+
+<div class="button-block">
+    <button id="convert-temp" class="desktop-only"> Convert Fahrenheit / Celsius </button>
+</div>
+
+<!--Convert Switch for mobile-->
+
+<div id="convert-switch" class="toggle-container">
+    <p> Toggle Celsius / Fahrenheit: </p>
+    <div class="toggle-buttons">
+        <input type="radio" id="celsius" name="unit" checked>
+        <label for="celsius" class="toggle-btn">&deg;C</label>
+        <input type="radio" id="fahrenheit" name="unit">
+        <label for="fahrenheit" class="toggle-btn">&deg;F</label>
+    </div>
+</div> 
+
+<!--Carousel / Pan-Gesture Section-->
+
+<section id="carousel-screen">
+<div class="pan-gesture">
+    <img src="scroll-arrow-left.svg" width="25px" height="auto" alt="left">
+    <div class="mobile-frame"> 
+    <div class="swipe-track">
+        <div class="background-I"> <p class="city-caption"> St. Louis, MO </p></div>
+        <div class="background-II"> <p class="city-caption"> Pittsburgh,PA </p></div>
+        <div class="background-III"> <p class="city-caption"> Hollywood, CA </p></div>
+    </div>
+    </div>
+    <img src="scroll-arrow-right.svg" width="25px" height="auto" alt="right">
+</div>
+
+
+
+<div class="bg-carousel-desktop">
+     <h3 class="sub-heading">
+        Explore!
+    </h3>
+<div class="carousel">
+
+    <div class="overlay"></div>
+    <div id="slide-I" class="slide active">
+        <p> St. Louis, MO </p>
+    </div>
+
+    <div id="slide-II" class="slide">
+    <div class="overlay"></div>
+        <p> Pittsburgh, PA </p>
+    </div>
+
+    <div id="slide-III" class="slide">
+    <div class="overlay"></div>
+        <p> Hollywood, CA </p>
+    </div>
+</div>
+</section>
+
+<!--Desktop End-Screen-->
+    
+<section id="forecast-screen" class="hidden">
+    <div id="forecast-frame">
+        <div class="forecast-day">
+            <p class="city-name"> City Name</p>
+            <p class="forecast"> Forecast </p>
+            <img class="forecast-photo" src="assets/images/vanilla-weather-icon.svg" width="100px" height="100px" alt="vanilla-icon">
+            <p class="high-temp" data-value="${max}">High: ${max}°C</p>
+            <p class="low-temp" data-value="${min}">Low: ${min}°C</p>
+
+        </div>
+    </div>
+</section>
+</body>
+</html>
